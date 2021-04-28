@@ -1,0 +1,73 @@
+@import "../varaible/colore";
+.custom-shape-divider-top-1619315220 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1619315220 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 180px;
+}
+
+.custom-shape-divider-top-1619315220 .shape-fill {
+    fill: #CAC531;
+}
+
+header {
+
+    .navBare {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .imagesLogo {
+            width: 11%;
+            margin-top: -2rem;
+            img {
+                width: 100px;
+            }
+        }
+        nav {
+            width: 40%;
+            margin-top: -2rem;
+            ul {
+                margin: 0;
+                text-align: center;
+                li{
+                    display: inline-block;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    margin-right: 9rem;
+                    color: $ColorPremierAndBackground;
+                }
+            }
+        }
+
+        .usrImages {
+            width: 28%;
+            margin-top: -2rem;
+            img{
+                width: 100px;
+                border-radius: 50%;
+                height: 100px;
+                float: right;
+                margin-top: -5rem;
+            }
+            span{
+                font-size: 3rem;
+                font-weight: bold;
+                display: block;
+                color: $ColorPremierAndBackground;
+                line-height: 1.7;
+            }
+        }
+
+    }
+}
