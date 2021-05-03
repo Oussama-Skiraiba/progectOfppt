@@ -56,6 +56,25 @@ header {
             
             
         }
+
+        .showData {
+            background: red;
+            width: 89%;
+            // height: 100%;
+            margin: 1rem 0 0 4rem;
+            border-radius: 10px;
+            display: none;
+            span {
+                display: block;
+                margin: 1rem;
+                padding: 1rem;
+                cursor: pointer;
+                transition: .4s;
+                &:hover {
+                    background: purple;
+                }
+            }
+        }
     }
     .loginAdmin {
         padding-top: 3rem;

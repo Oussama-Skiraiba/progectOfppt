@@ -1,47 +1,49 @@
-send.addEventListener("click",()=>{
-    // checkErroe();
-    
+let search = document.querySelector("#search");
+let showData = document.querySelector("#showData");
+send.addEventListener("click", () => {
+    checkErroe();
+
     let fd = new FormData();
 
     fd.append('Name', Name.value);
     fd.append('price', price.value);
     fd.append('place', place.value);
     // fd.append('images', images.value);
-    
+
     fetch('http://localhost/progectOfppt/php/add.php', {
         method: 'POST',
         body: fd
     }).then(res => res.json())
-    .then(data => console.log(data))
-})
+        .then(data => console.log(data));
 
+});
 
-// window.onload = ()=>{
-//     fetch('http://localhost/progectOfppt/php/show.php', {
-//         method: 'GET'
-//     }).then(response => response.json())
-//     .then(data => {
-//         // data.forEach(element => {
-//         //         let row = document.createElement("div");
-//         //         row.setAttribute("class", "row");
-//         //         let col1 = document.createElement("div");
-//         //         let col2 = document.createElement("div");
-//         //         let col3 = document.createElement("div");
-//         //         col1.innerHTML = element._name;
-//         //         col1.setAttribute("name", element._name);
-//         //         col3.innerHTML = element.price;
-//         //         col2.innerHTML = element.place;
-//         //         // col4.setAttribute("class", "icon");
-//         //         // img.setAttribute("src", 'http://localhost/proge/icon/trash-bin.png');
-//         //         // col4.appendChild(img);
-//         //         row.appendChild(col1);
-//         //         row.appendChild(col2);
-//         //         row.appendChild(col3);
-//         //         images.appendChild(row)
-//         //     });
-        
-//         console.log(data);
-//         })
-// }
-    
+//  search
 
+search.addEventListener('keyup', () => {
+    if (search.value === "") { showData.innerHTML = ""; return; }
+    fetch('http://localhost/progectOfppt/php/search.php?search=' + search.value
+    ).then(res => res.json())
+        .then(data => {
+            showData.innerHTML = ""
+            console.log(data);
+            data.forEach(element => {
+                // 
+                let templat = `<span onclick="handle(this)" data-show="${element.price}-${element.place}-${element._name}">${element._name}</span>`;
+                showData.insertAdjacentHTML("afterbegin", templat);
+            });
+            showData.style.display = "block";
+        }
+        );
+});
+function handle(event) {
+    let usr = event.getAttribute("data-show").split("-")
+    let price = document.querySelector("#price");
+    let place = document.querySelector("#place");
+    let name  = document.querySelector("#name");
+    name.value  = usr[2]
+    price.value = usr[0]
+    place.value = usr[1]
+}
+
+// + search.value +''

@@ -93,6 +93,27 @@ header .search input {
   border-radius: 10px;
 }
 
+header .search .showData {
+  background: red;
+  width: 89%;
+  margin: 1rem 0 0 4rem;
+  border-radius: 10px;
+  display: none;
+}
+
+header .search .showData span {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .search .showData span:hover {
+  background: purple;
+}
+
 header .loginAdmin {
   padding-top: 3rem;
   position: relative;

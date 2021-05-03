@@ -42,7 +42,7 @@
     </div>
 
 </body>
-<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>    -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
 <script src="../../js/errore.js"></script>
 <script src="../../js/add.js"></script>
 </html>

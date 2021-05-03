@@ -11,7 +11,9 @@
 
 <body>
 
-
+<div class="logo">
+        <img src="../images/icons/logo.svg" alt="">
+    </div>
     <header>
         <div class="headerContainer">
             <div class="mainIncludeAndImge">
