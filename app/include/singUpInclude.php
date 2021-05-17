@@ -19,6 +19,7 @@
             <label for="">Femal</label> <input type="radio" name="ginder"> 
             </div>
         </div>
-        <button class="btnSing">Register</button>
+        <!-- <button class="btnSing">Register</button> -->
+        <a href="#" class="btnSing">Register</a>
     </form>
 </div>

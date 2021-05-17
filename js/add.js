@@ -32,18 +32,21 @@ search.addEventListener('keyup', () => {
                 let templat = `<span onclick="handle(this)" data-show="${element.price}-${element.place}-${element._name}">${element._name}</span>`;
                 showData.insertAdjacentHTML("afterbegin", templat);
             });
+
             showData.style.display = "block";
         }
         );
 });
+
 function handle(event) {
     let usr = event.getAttribute("data-show").split("-")
     let price = document.querySelector("#price");
     let place = document.querySelector("#place");
     let name  = document.querySelector("#name");
-    name.value  = usr[2]
     price.value = usr[0]
     place.value = usr[1]
+    name.value  = usr[2]
+    showData.style.display = "none";
 }
 
 // + search.value +''

@@ -12,11 +12,11 @@
 
 html {
   font-size: 10px;
+  padding: 2.5rem 2.5rem 0 2.5rem;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding: 2.5rem 2.5rem 0 2.5rem;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -34,6 +34,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -1.5rem;
 }
 
 .headerBackground .logo {
@@ -47,17 +48,28 @@ button {
 .headerBackground .nav {
   width: 70%;
   margin: 2rem auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
+}
+
+.headerBackground .nav .borger {
+  display: none;
+  position: absolute;
+  right: -10%;
+}
+
+.headerBackground .nav .showMenu {
+  right: -10%;
+  background: #494845;
+  -webkit-box-shadow: 0px 0px 5px #252020;
+          box-shadow: 0px 0px 5px #252020;
+  z-index: 10;
 }
 
 .headerBackground .nav ul {
-  padding: 1rem;
   margin-left: -6rem;
+  padding: 1rem;
+  -webkit-transition: opacity .7s ease-in;
+  transition: opacity .7s ease-in;
 }
 
 .headerBackground .nav ul li {
@@ -69,6 +81,50 @@ button {
   font-size: 2.5rem;
   letter-spacing: 2px;
   font-weight: bold;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.headerBackground .nav ul li a:hover::after {
+  background: #494845;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.headerBackground .nav ul li a:hover::before {
+  right: 8%;
+  background: rgba(68, 64, 64, 0.705);
+  width: 100%;
+  opacity: 1;
+}
+
+.headerBackground .nav ul li a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 20%;
+  height: 10px;
+  bottom: -20%;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+  border-radius: 20px;
+  opacity: .1;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.headerBackground .nav ul li a::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 20%;
+  height: 10px;
+  bottom: -20%;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+  border-radius: 20px;
+  opacity: .1;
 }
 
 .btnHeader {
@@ -79,7 +135,6 @@ button {
 .btnHeader .singIn {
   margin-right: 1rem;
   background: #333333;
-  color: #CAC531;
 }
 
 .btnHeader button {
@@ -88,7 +143,7 @@ button {
   border: 1px solid #333333;
   border-radius: 10px;
   background: none;
-  font-weight: bold;
+  color: #fff;
 }
 
 .footer {
@@ -97,14 +152,17 @@ button {
   color: #fff;
   margin-top: 23rem;
   padding-top: 2rem;
-  height: 32.7vh;
+  height: 37vh;
 }
 
 .footer .footerContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .footer .footerContainer .fottrtIfo li {
@@ -144,16 +202,237 @@ button {
   color: #fff;
 }
 
+@media (max-width: 991px) {
+  header {
+    height: 70vh !important;
+    width: 96.2%;
+    position: relative;
+  }
+  header .headerBackground .nav ul {
+    position: absolute;
+    width: 280px;
+    opacity: 0;
+    text-align: center;
+    top: 45px;
+    display: none;
+    z-index: -1;
+    margin-left: 0 !important;
+  }
+  header .headerBackground .nav ul::after {
+    position: absolute;
+    content: "";
+    top: -20px;
+    right: 0;
+    border: 10px solid;
+    border-color: transparent transparent #494845 transparent;
+  }
+  header .headerBackground .nav ul li {
+    display: block;
+  }
+  header .headerBackground .nav ul li a {
+    color: #CAC531;
+  }
+  header .headerBackground .nav .borger {
+    display: block;
+  }
+  header .headerBackground .nav .borger .menu {
+    height: 30px;
+  }
+  header .titel {
+    position: absolute;
+    top: 43%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 92% !important;
+  }
+  header .titel .titlePremier {
+    font-size: 4rem !important;
+  }
+  header .titel .titleSeconde {
+    font-size: 3rem  !important;
+    margin-left: 0 !important;
+  }
+  header .loginHeader {
+    display: none;
+  }
+  header .searchMedia {
+    display: block !important;
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: 70%;
+    -webkit-transform: translate(-3px, -7px);
+            transform: translate(-3px, -7px);
+  }
+  header .searchMedia .inputSearch .input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid #CAC531;
+    border-radius: 20px;
+    padding-left: 5rem;
+  }
+  header .searchMedia .inputSearch .input::-webkit-input-placeholder {
+    display: inline-block;
+  }
+  header .searchMedia .inputSearch .input:-ms-input-placeholder {
+    display: inline-block;
+  }
+  header .searchMedia .inputSearch .input::-ms-input-placeholder {
+    display: inline-block;
+  }
+  header .searchMedia .inputSearch .input::placeholder {
+    display: inline-block;
+  }
+  header .searchMedia .inputSearch .imagesSearchInput {
+    position: absolute;
+    top: 4px;
+    left: 15px;
+  }
+  header .searchMedia .inputSearch .imagesSearchInput img {
+    height: 30px;
+  }
+  header .btnHeader {
+    display: none;
+  }
+  .svgHeader {
+    bottom: -20% !important;
+  }
+  .svgHeader svg {
+    width: calc(96.3% - 2.5rem) !important;
+  }
+  .margin {
+    padding: 3rem 0 !important;
+  }
+  .main .mainContainer {
+    display: block !important;
+  }
+  .main .mainContainer .mainDiv {
+    margin: 0 0 5rem 0 !important;
+  }
+  .main .mainContainer .mainDiv img {
+    width: 20% !important;
+  }
+  .catgori h2 {
+    font-size: 3rem !important;
+    letter-spacing: 0 !important;
+    margin-left: -6rem;
+  }
+  .catgori .catrContainer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .catgori .catrContainer .card:not(:first-of-type) {
+    margin-left: 0 !important;
+  }
+  .leadingCompain h2 {
+    font-size: 2.5rem !important;
+  }
+  .leadingCompain h2 span {
+    display: initial !important;
+  }
+  .leadingCompain .leadingCompainContainer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .leadingCompain .leadingCompainContainer img {
+    width: 74% !important;
+    display: inline-block;
+  }
+  .clientes .svgClientes {
+    top: -13% !important;
+  }
+  .clientes h2 {
+    font-size: 2.5rem !important;
+  }
+  .clientes .clientesContainer {
+    display: block !important;
+  }
+  .clientes .svgClientBottom {
+    bottom: -13% !important;
+  }
+  .contact iframe {
+    width: 500px !important;
+  }
+  .contact .contactContainer {
+    display: block !important;
+  }
+  .contact .contactContainer .contactInfo {
+    margin-left: 0 !important;
+    margin-top: 8rem !important;
+  }
+  .contact .contactContainer .contactInfo input, .contact .contactContainer .contactInfo #textarea, .contact .contactContainer .contactInfo .send {
+    width: 98% !important;
+    padding: 10px 15px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    margin: 3rem auto;
+  }
+  .footer {
+    height: 46.7vh !important;
+  }
+  .footer .footerContainer .fottrtIfo {
+    margin-left: 2rem !important;
+  }
+  .footer .footerContainer .fottrtIfo li {
+    font-size: 2rem;
+    margin: 1rem 0 0 0 !important;
+  }
+  .footer .svgClientesFotter {
+    bottom: 90% !important;
+  }
+  .footer .copy {
+    margin: 3rem;
+  }
+  .footer .copy p {
+    text-align: initial !important;
+  }
+  .footer .copy .icon img {
+    width: 7% !important;
+    margin-top: -3rem !important;
+    margin-left: 1rem;
+    color: #fff;
+  }
+}
+
+@media (max-width: 576px) {
+  .clientes .svgClientes {
+    top: -7% !important;
+  }
+  .clientes .svgClientBottom {
+    bottom: -7% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .svgHeader {
+    bottom: 10% !important;
+  }
+}
+
 /*Start Hrader */
+.svgHeader {
+  position: absolute;
+  bottom: 14%;
+  z-index: -1;
+}
+
 header {
   position: relative;
   height: 60vh;
   background: #CAC531;
-}
-
-header .svgHeader {
-  position: absolute;
-  bottom: -30%;
 }
 
 header .titel {
@@ -188,10 +467,10 @@ header .titel .textHeader p {
 header .loginHeader {
   position: absolute;
   width: 25%;
-  height: 77vh;
+  height: 85vh;
   background: #fff;
-  right: 4%;
-  top: 30%;
+  right: 3%;
+  top: 9%;
   border: 3px solid #494845;
   border-radius: 10px;
 }
@@ -230,6 +509,10 @@ header .loginHeader .loginContainer .btnSreash button {
   font-size: 2rem;
 }
 
+header .searchMedia {
+  display: none;
+}
+
 /*End Hrader */
 .margin {
   padding: 10rem 0;
@@ -246,6 +529,7 @@ header .loginHeader .loginContainer .btnSreash button {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  padding-top: 7rem;
 }
 
 .main .mainContainer .mainDiv {
@@ -277,21 +561,20 @@ header .loginHeader .loginContainer .btnSreash button {
 
 .catgori .catrContainer {
   margin-top: 6rem;
-  width: 33.33333%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .catgori .catrContainer .card {
-  border-radius: 10px;
   height: 420px;
-  width: 400px;
+  width: 379px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
   cursor: pointer;
+  margin-bottom: 5rem;
 }
 
 .catgori .catrContainer .card:not(:first-of-type) {
@@ -303,7 +586,7 @@ header .loginHeader .loginContainer .btnSreash button {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -311,6 +594,7 @@ header .loginHeader .loginContainer .btnSreash button {
   transition: -webkit-transform 1s linear;
   transition: transform 1s linear;
   transition: transform 1s linear, -webkit-transform 1s linear;
+  border-radius: 10px;
 }
 
 .catgori .catrContainer .card .front {
@@ -319,13 +603,13 @@ header .loginHeader .loginContainer .btnSreash button {
 }
 
 .catgori .catrContainer .card .front img {
-  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 .catgori .catrContainer .card .back {
   text-align: center;
   background: #333333;
-  border-radius: 10px;
   color: #fff;
   padding: 2rem 1rem;
   -webkit-transform: perspective(800px) rotateY(180deg);
@@ -414,7 +698,7 @@ header .loginHeader .loginContainer .btnSreash button {
 
 .clientes .svgClientBottom {
   position: absolute;
-  bottom: -46%;
+  bottom: -44%;
   width: 100%;
 }
 

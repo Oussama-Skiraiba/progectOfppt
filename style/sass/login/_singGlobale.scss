@@ -1,9 +1,5 @@
 @import "../sab/body";
 @import "../varaible/colore";
-
-body {
-    padding: 0;
-}
 .logo {
     position: relative;
     height: 0;
@@ -18,15 +14,16 @@ body {
 header {
     background: $HeaderBackground;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     .headerContainer {
-        background: $FotterBackgroundSocialMedia;
+        // background: #9BA1B1;
+        background: #74808C;
         width: 80%;
         height: 80vh;
         position: absolute;
-        top: 10%;
-        left: 10%;
-        transform: translate(10px, 10px);
+        top: 19%;
+        left: 14%;
+        transform: translate(-50px, -50px);
         border-radius: 20px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         .mainIncludeAndImge {

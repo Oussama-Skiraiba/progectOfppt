@@ -12,11 +12,11 @@
 
 html {
   font-size: 10px;
+  padding: 2.5rem 2.5rem 0 2.5rem;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding: 2.5rem 2.5rem 0 2.5rem;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;

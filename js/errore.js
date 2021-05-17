@@ -8,6 +8,7 @@ let description = document.querySelector("#description");
 let file = document.querySelector("#file");
 let images = document.querySelector("#images");
 // let search = document.querySelector("#search");
+
 // function for heandle errore
 
 let error = (index, text) => {

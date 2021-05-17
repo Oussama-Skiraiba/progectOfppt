@@ -63,6 +63,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- search Media query -->
+
+        <div class="searchMedia">
+            <div class="inputSearch">
+                <input type="text" placeholder="Where are you giong" class="input">
+                <div class="imagesSearchInput">
+                    <img src="../images/mediaQuery/search.svg" alt="search">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
     </header>
 
     <!-- End Header -->
@@ -162,7 +182,7 @@
             </div>
 
             <!-- 3 -->
-            <div class="card">
+            <!-- <div class="card">
 
                 <div class=" front">
                     <img src="../images/imagesCatigori/newyork.jpg" alt="">
@@ -176,11 +196,11 @@
                     </p>
                 </div>
 
-            </div>
+            </div> -->
 
-        </div>
+        <!-- </div> -->
 
-        <div class="catrContainer">
+        <!-- <div class="catrContainer"> -->
 
             <div class="card">
 
@@ -216,6 +236,27 @@
             </div>
 
             <!-- 3 -->
+            <!-- <div class="card">
+
+                <div class=" front">
+                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
+                </div>
+
+                <div class=" back">
+                    <span class="nameLoacition">Newyork</span>
+                    <span class="priceTravel">1000$</span>
+                    <p class="info">
+                        New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
+                    </p>
+                </div>
+
+            </div> -->
+
+        <!-- </div> -->
+
+
+        <!-- <div class="catrContainer"> -->
+
             <div class="card">
 
                 <div class=" front">
@@ -231,6 +272,40 @@
                 </div>
 
             </div>
+
+            <!-- 2 -->
+            <div class="card">
+
+                <div class=" front">
+                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
+                </div>
+
+                <div class=" back">
+                    <span class="nameLoacition">Newyork</span>
+                    <span class="priceTravel">1000$</span>
+                    <p class="info">
+                        New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- 3 -->
+            <!-- <div class="card">
+
+    <div class=" front">
+        <img src="../images/imagesCatigori/newyork.jpg" alt="">
+    </div>
+
+    <div class=" back">
+        <span class="nameLoacition">Newyork</span>
+        <span class="priceTravel">1000$</span>
+        <p class="info">
+            New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
+        </p>
+    </div>
+
+</div> -->
 
         </div>
 
@@ -263,7 +338,7 @@
 
     <!-- Start Clientes -->
     <div class=" clientes ">
-        
+
         <div class="svgClientes">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#333" fill-opacity="1" d="M0,256L34.3,224C68.6,192,137,128,206,112C274.3,96,343,128,411,154.7C480,181,549,203,617,218.7C685.7,235,754,245,823,213.3C891.4,181,960,107,1029,106.7C1097.1,107,1166,181,1234,213.3C1302.9,245,1371,235,1406,229.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
@@ -337,7 +412,7 @@
             <div class="contactInfo">
                 <input type="text" placeholder="You name">
                 <input type="text" placeholder="You email">
-                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Description" ></textarea>
+                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Description"></textarea>
                 <button class="send">send</button>
             </div>
 
@@ -355,5 +430,6 @@
 
 
 </body>
+<script src="../js/menu.js"></script>
 
 </html>
