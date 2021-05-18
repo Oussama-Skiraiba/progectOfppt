@@ -1,6 +1,6 @@
 @import "../varaible/colore";
 @import "../sab/body";
-body {
+html {
     padding: 0;
 }
 header {
@@ -110,21 +110,65 @@ header {
             margin: 1rem 0;
             cursor: pointer;
             img{
-                width: 20%;
+                width: 15%;
             }
             span{
                 margin-left: 1rem;
                 font-size: 2rem;
             }
         }
+        .dis {
+            display: block !important;
+            transition: display .3s ease-in-out;
+        }
+        .items {
+            display: none;
+            background: $white; 
+            background: $HeaderBackground;
+            margin: 1rem 0;
+            border-radius: 4px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                top: -20px;
+                right: 20px;
+                border: 10px solid;
+                border-color: transparent transparent $HeaderBackground transparent
+            }
+            a {
+                position: relative;
+                color: $white;
+                display: block;
+                margin-left: 5rem;
+                font-size: 2rem;
+                &:hover {
+                    color: #333;
+                    transition: color .4s ease-in;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    border: 3px solid #fff;
+                    border-radius: 50%;
+                    left: -25px;
+                    top: 11px;
+                    width: 15px;
+                    height: 15px;
+                }
+                
+            }
+        }
     }
     .logOut {
-        position: relative;
-        bottom: -45%;
+        position: absolute;
+        bottom: 10%;
+        left: 6px;
         img{
             position: absolute;
             width: 20%;
             top: 10%;
+            margin-top: .2rem;
         }
         a {
             width: 145px;
@@ -133,9 +177,10 @@ header {
             border-radius: 10px;
             display: block;
             text-align: right;
-            font-size: 2rem;
-            padding: 4px 10px;
+            font-size: 2.2rem;
+            padding: 5px 10px;
             font-weight: bold;
+            margin-right: 3rem;
             }
         }
 }

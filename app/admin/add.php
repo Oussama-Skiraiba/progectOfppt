@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,23 +19,36 @@
         <h2>Add</h2>
         <div class="containerCart">
             <div class="input">
-                <input type="text" placeholder="name" id="name">
+                <select id="type">
+                    <option value="Roundtrip">Round trip</option>
+                    <option value="Oneway">One-way</option>
+                </select>
+                <input type="text" placeholder="Leaving from" id="Leaving_from">
+                <input type="text" placeholder="Going to" id="Going_to">
                 <input type="number" placeholder="price" id="price">
-                <input type="number" placeholder="place" id="place">
-                <input type="number" placeholder="quantity" id="quantity">
-                <textarea name=""  placeholder="description" id="description"></textarea>
+                <!-- <input type="date" name="Departing" id="Departing">
+                <input type="date" name="Returning" id="Returning">
+                <select  id="class">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business class</option>
+                    <option value="First">First class</option>
+                </select>
+                <input type="number" placeholder="seats" id="seats"> -->
             </div>
-            <div class="aploadImages">
+
+            <div class="input">
+                <input type="date" name="Departing" id="Departing">
+                <input type="date" name="Returning" id="Returning">
+                <select  id="class">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business class</option>
+                    <option value="First">First class</option>
+                </select>
+                <input type="number" placeholder="seats" id="seats">
             
-                <div class="center" id="images">
-                    <input type="file" id="file">
-                    <img src="../../images/addminIcon/cloud.svg" alt="cloud">
-                </div>
-                    <img src="" alt="showImg" id="showImg" class="showImg">
+            </div> 
             
-            </div>
-            
-            <button class="send" id="send">send</button>
+            <button class="send" id="send">add</button>
         </div>
 
     </div>

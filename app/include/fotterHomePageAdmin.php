@@ -7,8 +7,12 @@
 
         <div class="listView">
             <img src="../../images/addminIcon/sitemap.svg" alt="sitemap">
-            <span>List View</span>
-
+            <span id="listView">List View</span>
+            <div class="items" id="items">
+                <a href="#">Add</a>
+                <a href="#">Update</a>
+                <a href="#">remover</a>
+            </div>
         </div>
 
         <div class="sitting">

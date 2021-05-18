@@ -30,7 +30,7 @@ button {
   cursor: pointer;
 }
 
-body {
+html {
   padding: 0;
 }
 
@@ -154,7 +154,7 @@ header .loginAdmin img {
 }
 
 .main .mainContainer .dashboard img, .main .mainContainer .listView img, .main .mainContainer .sitting img {
-  width: 20%;
+  width: 15%;
 }
 
 .main .mainContainer .dashboard span, .main .mainContainer .listView span, .main .mainContainer .sitting span {
@@ -162,15 +162,66 @@ header .loginAdmin img {
   font-size: 2rem;
 }
 
-.main .logOut {
+.main .mainContainer .dis {
+  display: block !important;
+  -webkit-transition: display .3s ease-in-out;
+  transition: display .3s ease-in-out;
+}
+
+.main .mainContainer .items {
+  display: none;
+  background: #fff;
+  background: #CAC531;
+  margin: 1rem 0;
+  border-radius: 4px;
   position: relative;
-  bottom: -45%;
+}
+
+.main .mainContainer .items::after {
+  position: absolute;
+  content: "";
+  top: -20px;
+  right: 20px;
+  border: 10px solid;
+  border-color: transparent transparent #CAC531 transparent;
+}
+
+.main .mainContainer .items a {
+  position: relative;
+  color: #fff;
+  display: block;
+  margin-left: 5rem;
+  font-size: 2rem;
+}
+
+.main .mainContainer .items a:hover {
+  color: #333;
+  -webkit-transition: color .4s ease-in;
+  transition: color .4s ease-in;
+}
+
+.main .mainContainer .items a::after {
+  position: absolute;
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 50%;
+  left: -25px;
+  top: 11px;
+  width: 15px;
+  height: 15px;
+}
+
+.main .logOut {
+  position: absolute;
+  bottom: 10%;
+  left: 6px;
 }
 
 .main .logOut img {
   position: absolute;
   width: 20%;
   top: 10%;
+  margin-top: .2rem;
 }
 
 .main .logOut a {
@@ -180,7 +231,8 @@ header .loginAdmin img {
   border-radius: 10px;
   display: block;
   text-align: right;
-  font-size: 2rem;
-  padding: 4px 10px;
+  font-size: 2.2rem;
+  padding: 5px 10px;
   font-weight: bold;
+  margin-right: 3rem;
 }
