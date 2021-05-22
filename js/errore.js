@@ -40,9 +40,7 @@ let checkErroe = ()=>{
     else if (Departing.value == "") {
         error('error', 'Departing is empty')
     }
-    else if (Returning.value == "") {
-        error('error', 'Returning is empty')
-    }else if (Class.value == "") {
+    else if (Class.value == "") {
         error('error', 'Class is empty')
     }else if (seats.value == "") {
         error('error', 'seats is empty')

@@ -10,14 +10,17 @@
             <img src="../../images/icons/logo.svg" alt="">
         </div>
         <nav>
-            <ul>
-                <li>Homme</li>
-                <li>Contact-Me</li>
+            <div class="menu">
+                <img src="../../images/mediaQuery/menu.svg" id="menu" alt="">
+            </div>
+            <ul  id="ul">
+                <li><a href="#">Homme</a></li>
+                <li><a href="#">Contact-Me </a></li>
             </ul>
         </nav>
 
+        <span>Test test</span>
         <div class="usrImages">
-            <span>Test test</span>
             <img src="../../images/kobu-agency-67L18R4tW_w-unsplash.jpg" alt="">
         </div>
 

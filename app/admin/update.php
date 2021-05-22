@@ -18,6 +18,7 @@
     <div class="container">
         <h2>Up date</h2>
         <div class="containerCart">
+        <input type="hidden" name="_id" value="">
             <div class="input">
                 <select id="type">
                     <option value="Roundtrip">Round trip</option>

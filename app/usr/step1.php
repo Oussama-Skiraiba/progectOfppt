@@ -22,7 +22,7 @@
         <h2>number of trips</h2>
         <div class="cartGrid" id="cartGrid">
 
-            <div class="catrInfo" id="catrInfo">
+            <!-- <div class="catrInfo" id="catrInfo">
                 <img src="../../images/icons/logo.svg" alt="">
 
                 <div class="diparte" id="diparte">
@@ -69,7 +69,7 @@
                     </span>
                 </div>
 
-            </div>
+            </div> -->
             
     
             <button class="next">Next</button>

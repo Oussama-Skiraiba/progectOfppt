@@ -8,6 +8,10 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html {
@@ -30,7 +34,11 @@ button {
   cursor: pointer;
 }
 
-.custom-shape-divider-top-1619315220 {
+header {
+  position: relative;
+}
+
+header .custom-shape-divider-top-1619315220 {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,39 +50,52 @@ button {
   z-index: -1;
 }
 
-.custom-shape-divider-top-1619315220 svg {
+header .custom-shape-divider-top-1619315220 svg {
   position: relative;
   display: block;
   width: calc(133% + 1.3px);
   height: 180px;
 }
 
-.custom-shape-divider-top-1619315220 .shape-fill {
+header .custom-shape-divider-top-1619315220 .shape-fill {
   fill: #CAC531;
 }
 
 header .navBare {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  margin: 0 1rem;
 }
 
 header .navBare .imagesLogo {
-  width: 11%;
-  margin-top: -2rem;
+  position: absolute;
+  left: 20px;
 }
 
 header .navBare .imagesLogo img {
-  width: 100px;
+  height: 95px;
 }
 
 header .navBare nav {
   width: 40%;
-  margin-top: -2rem;
+  margin: auto;
+}
+
+header .navBare nav .menu {
+  display: none;
+}
+
+header .navBare nav .show {
+  right: -56%;
+  background: #494845;
+  -webkit-box-shadow: 0px 0px 5px #252020;
+          box-shadow: 0px 0px 5px #252020;
+  z-index: 10;
 }
 
 header .navBare nav ul {
@@ -87,12 +108,22 @@ header .navBare nav ul li {
   font-size: 3rem;
   font-weight: bold;
   margin-right: 9rem;
+}
+
+header .navBare nav ul li a {
   color: #333333;
 }
 
+header .navBare span {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+  color: #333333;
+  margin-top: 1rem;
+}
+
 header .navBare .usrImages {
-  width: 28%;
-  margin-top: -2rem;
+  width: 16%;
 }
 
 header .navBare .usrImages img {
@@ -100,26 +131,17 @@ header .navBare .usrImages img {
   border-radius: 50%;
   height: 100px;
   float: right;
-  margin-top: -5rem;
-}
-
-header .navBare .usrImages span {
-  font-size: 3rem;
-  font-weight: bold;
-  display: block;
-  color: #333333;
-  line-height: 1.7;
+  margin-right: 6rem;
 }
 
 .stepBorder {
   display: inline-block;
-  margin-top: 9rem;
+  margin-top: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 2rem;
   position: relative;
 }
@@ -140,21 +162,12 @@ header .navBare .usrImages span {
 .stepBorder span::after {
   content: "";
   position: absolute;
-  width: 45%;
   height: 30%;
   border-bottom: 5px solid #707070;
   border-radius: 3px;
-  left: 3.5%;
-}
-
-.stepBorder span::before {
-  content: "";
-  position: absolute;
-  width: 45%;
-  height: 30%;
-  border-bottom: 5px solid #707070;
-  border-radius: 3px;
-  right: 3.5%;
+  right: 17.5%;
+  z-index: -1;
+  width: 65%;
 }
 
 .catrContainer {
@@ -206,6 +219,10 @@ header .navBare .usrImages span {
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+footer {
+  position: relative;
+}
+
 footer .custom-shape-divider-bottom-1619414709 {
   position: absolute;
   left: 0;
@@ -225,6 +242,70 @@ footer .custom-shape-divider-bottom-1619414709 svg {
 
 footer .custom-shape-divider-bottom-1619414709 .shape-fill {
   fill: #CAC531;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  header .navBare .imagesLogo {
+    left: -9px !important;
+  }
+  header .navBare .imagesLogo img {
+    height: 60px !important;
+  }
+  header .navBare nav {
+    position: relative;
+  }
+  header .navBare nav .menu {
+    position: absolute;
+    right: -70px;
+    top: 7px;
+    display: block !important;
+  }
+  header .navBare nav .menu img {
+    height: 30px;
+  }
+  header .navBare nav ul {
+    position: absolute;
+    width: 160px;
+    top: 45px;
+    opacity: 0;
+    display: none;
+    text-align: center;
+    z-index: -1;
+  }
+  header .navBare nav ul::after {
+    position: absolute;
+    content: "";
+    top: -20px;
+    right: 0;
+    border: 10px solid;
+    border-color: transparent transparent #494845 transparent;
+  }
+  header .navBare nav ul li {
+    font-size: 2rem !important;
+    font-weight: bold;
+    margin-right: 0 !important;
+  }
+  header .navBare nav ul li a {
+    color: #CAC531;
+  }
+  header .navBare span {
+    font-size: 3rem;
+    font-weight: bold;
+    display: none;
+    color: #333333;
+    margin-top: 1rem;
+  }
+  header .navBare .usrImages {
+    width: 0 !important;
+    display: none;
+  }
+  header .navBare .usrImages img {
+    width: 60px !important;
+    border-radius: 50%;
+    height: 60px !important;
+    float: right;
+    margin-right: 0 !important;
+  }
 }
 
 .cartGrid {

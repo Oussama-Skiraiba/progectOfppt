@@ -1,6 +1,3 @@
-let search = document.querySelector("#search");
-
-
 send.addEventListener("click", () => {
     checkErroe();
     let fd = new FormData();

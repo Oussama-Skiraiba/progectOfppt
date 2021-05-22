@@ -1,0 +1,72 @@
+@media(min-width: 320px) and (max-width:576px) {
+    header {
+        
+        .navBare  {
+            
+            .imagesLogo {
+                left: -9px !important;
+                img {
+                    height: 60px !important;
+                }
+            }
+            nav {
+                position: relative;
+                .menu {
+                    position: absolute;
+                    right: -70px;
+                    top: 7px;
+                    display: block !important;
+                    img {
+                        height: 30px;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    width: 160px;
+                    top: 45px;
+                    opacity: 0;
+                    display: none;
+                    text-align: center;
+                    z-index: -1;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: -20px;
+                        right: 0;
+                        border: 10px solid;
+                        border-color: transparent transparent #494845 transparent;
+                    }
+
+                    li{
+                        font-size: 2rem !important;
+                        font-weight: bold;
+                        margin-right: 0 !important;
+                        a {
+                            color: $HeaderBackground;
+                        }
+                    }
+                }
+            }
+            span{
+                font-size: 3rem;
+                font-weight: bold;
+                display: none;
+                color: $ColorPremierAndBackground;
+                margin-top: 1rem;
+
+            }
+            .usrImages {
+                width: 0 !important;
+                display: none;
+                img{
+                    width: 60px !important;
+                    border-radius: 50%;
+                    height: 60px !important;
+                    float: right;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}
