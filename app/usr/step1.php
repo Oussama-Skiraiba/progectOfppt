@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,15 +73,16 @@
             </div> -->
             
     
-            <button class="next">Next</button>
+            
 
 
         </div>
     </div>
-
+    <a href="#" class="next">Next</a>
     <!-- GlobaleUsrFooter -->
     <?php include "../include/GlobaleUsrFooter.php"; ?>
 
 </body>
 <script src="../../js/step/step1.js"></script>
+<script src="../../js/step/menu.js"></script>
 </html>

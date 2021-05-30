@@ -19,8 +19,8 @@
             </ul>
         </nav>
 
-        <span>Test test</span>
-        <div class="usrImages">
+        <span id="nameUser">Test test</span>
+        <div class="usrImages" id="imagesUser">
             <img src="../../images/kobu-agency-67L18R4tW_w-unsplash.jpg" alt="">
         </div>
 

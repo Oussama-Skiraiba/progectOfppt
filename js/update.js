@@ -7,7 +7,7 @@ search.addEventListener('keyup', () => {
     fetch('http://localhost/progectOfppt/php/admin/search.php?search=' + search.value)
         .then(res => res.json())
         .then(data => {
-            console.log();
+            // console.log(data);
             if (data[0] == undefined) {
                 return;
             }

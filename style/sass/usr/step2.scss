@@ -2,6 +2,8 @@
 @import "../step/StepHeader";
 @import "../step/StepMain";
 @import "../step/StepFotter";
+@import "../mediaQuery/step/HeaderStepMedia";
+@import "../mediaQuery/step/step2Container";
 
 .cartGrid {
     margin: 1rem;
@@ -72,6 +74,7 @@
         width: 100%;
         transition: all 1s ease-in-out;
         .border {
+            
             position: relative;
             button {
                 box-shadow: rgba(7, 7, 7, 0) 0px 50px 100px -10px, rgb(0, 0, 0) 0px 30px 60px -20px;
@@ -101,8 +104,11 @@
                 transform: translateY(-3px);
             }
         }
-
+        // .show {
+        //     // display: block !important;
+        // }
         .passportInfo{
+            // display: none;
             background:$FotterBackgroundSocialMedia;
             box-shadow: 0px 0px 10px $ColorPremierAndBackground;
             height: 100px;

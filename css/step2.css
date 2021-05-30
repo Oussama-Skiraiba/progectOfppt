@@ -154,9 +154,19 @@ header .navBare .usrImages img {
   border-radius: 50%;
   background: #707070;
   color: #333333;
-  padding: 10px 15px;
   border: 1px solid #707070;
   margin: 0 1rem;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .stepBorder span::after {
@@ -192,7 +202,7 @@ header .navBare .usrImages img {
   position: absolute;
   right: 10%;
   width: 150px;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border: 0;
   border-radius: 20px;
   font-size: 2rem;
@@ -203,6 +213,7 @@ header .navBare .usrImages img {
   transition: -webkit-transform .7s ease-in;
   transition: transform .7s ease-in;
   transition: transform .7s ease-in, -webkit-transform .7s ease-in;
+  text-align: center;
 }
 
 .next:hover {
@@ -242,6 +253,279 @@ footer .custom-shape-divider-bottom-1619414709 svg {
 
 footer .custom-shape-divider-bottom-1619414709 .shape-fill {
   fill: #CAC531;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  header .custom-shape-divider-top-1619315220 svg {
+    height: 118px !important;
+  }
+  header .navBare .imagesLogo {
+    left: -9px !important;
+  }
+  header .navBare .imagesLogo img {
+    height: 60px !important;
+  }
+  header .navBare nav {
+    position: relative;
+  }
+  header .navBare nav .menu {
+    position: absolute;
+    right: -70px;
+    top: 7px;
+    display: block !important;
+  }
+  header .navBare nav .menu img {
+    height: 30px;
+  }
+  header .navBare nav ul {
+    position: absolute;
+    width: 160px;
+    top: 45px;
+    opacity: 0;
+    display: none;
+    text-align: center;
+    z-index: -2;
+    min-height: 208px;
+  }
+  header .navBare nav ul::after {
+    position: absolute;
+    content: "";
+    top: -20px;
+    right: 0;
+    border: 10px solid;
+    border-color: transparent transparent #494845 transparent;
+  }
+  header .navBare nav ul li {
+    font-size: 2rem !important;
+    font-weight: bold;
+    margin-right: 0 !important;
+  }
+  header .navBare nav ul li a {
+    color: #fff;
+  }
+  header .navBare .nameUser {
+    display: block !important;
+  }
+  header .navBare span {
+    font-size: 2.5rem !important;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+    position: absolute;
+    top: 188px;
+    color: #fff;
+    z-index: 10;
+    left: 100px;
+    display: none;
+  }
+  header .navBare .imagesUser {
+    display: block !important;
+  }
+  header .navBare .usrImages {
+    display: none;
+    position: absolute;
+    top: 131px;
+    left: 55%;
+    z-index: 10;
+  }
+  header .navBare .usrImages img {
+    width: 60px !important;
+    border-radius: 50%;
+    height: 60px !important;
+    float: right;
+    margin-right: 0 !important;
+  }
+  .stepBorder {
+    margin-top: 13rem !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  header .navBare .imagesLogo {
+    left: 0 !important;
+  }
+  header .navBare nav {
+    width: auto !important;
+  }
+  header .navBare nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: 5rem !important;
+  }
+  header .navBare nav ul li {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+    font-size: 2rem !important;
+  }
+  header .navBare span {
+    font-size: 2rem !important;
+    margin-right: 2rem !important;
+    margin-top: 3rem !important;
+  }
+  header .navBare .usrImages img {
+    width: 80px !important;
+    height: 80px !important;
+    margin-top: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navBare nav {
+    width: auto !important;
+  }
+  header .navBare nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .navBare nav ul li {
+    margin-left: 3rem !important;
+    margin-right: 0 !important;
+  }
+  header .navBare span {
+    margin-top: 2rem !important;
+  }
+  header .navBare .usrImages img {
+    margin-top: .5rem !important;
+    margin-right: 1rem !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .catrContainer {
+    min-height: 100em !important;
+  }
+  .catrContainer h2 {
+    font-size: 2rem !important;
+  }
+  .catrContainer .contact {
+    display: block !important;
+  }
+  .catrContainer .contact input {
+    width: 60vw !important;
+    margin: 1rem !important;
+  }
+  .catrContainer .adult span {
+    display: block !important;
+    margin-bottom: 1rem;
+  }
+  .catrContainer .adult select {
+    width: 60vw !important;
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  .catrContainer .adult input {
+    width: 60vw !important;
+    margin: 1rem !important;
+  }
+  .catrContainer .passport .border button {
+    width: 70vw !important;
+  }
+  .catrContainer .passport .border .imageBoreder img {
+    display: none !important;
+  }
+  .catrContainer .passportInfo {
+    width: 70vw !important;
+    height: 60em !important;
+  }
+  .catrContainer .passportInfo .paddingInfp {
+    display: block !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 span {
+    margin: 2rem 1rem !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 input:not(:first-of-type) {
+    width: 61vw !important;
+    margin: 1rem 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 select {
+    width: 61vw !important;
+    margin: 2rem 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 {
+    display: block !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 .dateInfoUsr p {
+    margin-left: 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 .dateInfoUsr input:not(:first-of-type) {
+    width: 61vw !important;
+    margin: 1rem 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .dateInfoPassport input {
+    width: 61vw !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .catrContainer {
+    display: block !important;
+  }
+  .catrContainer .passport .border .imageBoreder img {
+    display: none !important;
+  }
+  .catrContainer .contact {
+    display: block !important;
+  }
+  .catrContainer .contact input {
+    width: 60vw !important;
+    margin: 2rem !important;
+    display: block !important;
+  }
+  .catrContainer .adult span {
+    display: block !important;
+    margin-bottom: 1rem;
+  }
+  .catrContainer .adult select {
+    width: 60vw !important;
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  .catrContainer .adult input {
+    width: 60vw !important;
+    margin: 1rem !important;
+  }
+  .catrContainer .passportInfo {
+    width: 70vw !important;
+    height: 60em !important;
+  }
+  .catrContainer .passportInfo .paddingInfp {
+    display: block !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 span {
+    margin: 2rem 1rem !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 input:not(:first-of-type) {
+    display: block !important;
+    width: 61vw !important;
+    margin: 1rem 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__1 select {
+    width: 61vw !important;
+    margin: 2rem 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 {
+    display: block !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 .dateInfoUsr p {
+    margin-left: 0 !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .info__2 .dateInfoUsr input:not(:first-of-type) {
+    width: 61vw !important;
+  }
+  .catrContainer .passportInfo .paddingInfp .dateInfoPassport input {
+    width: 61vw !important;
+  }
 }
 
 .cartGrid {

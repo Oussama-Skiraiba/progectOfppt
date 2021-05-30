@@ -21,13 +21,10 @@ CREATE TABLE users(
 
 CREATE TABLE passport(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    pp_nationality VARCHAR(50),
-    pp_date_of_issuel DATE,
-    pp_date_of_expiry DATE,
     uniqueNumber VARCHAR(230) UNIQUE,
-    cin VARCHAR(10),
-    user_id INT,
-    FOREIGN KEY(user_id) REFERENCES users(id)
+    pp_nationality VARCHAR(50),
+    pp_date_of_issuel VARCHAR(50),
+    nationlityPassport VARCHAR(230)
 )ENGINE = InnoDB;
 
 CREATE TABLE card(
@@ -59,9 +56,9 @@ CREATE TABLE admin(
 )ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS reservation (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  user_id INT NOT NULL,
-  flight_id INT NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users (id),
-  FOREIGN KEY (flight_id) REFERENCES flight (id) ON DELETE CASCADE
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    flight_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (flight_id) REFERENCES flight (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;

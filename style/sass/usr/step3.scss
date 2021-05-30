@@ -2,6 +2,9 @@
 @import "../step/StepHeader";
 @import "../step/StepMain";
 @import "../step/StepFotter";
+@import "../mediaQuery/step/HeaderStepMedia";
+@import "../mediaQuery/step/step3Container";
+
 
 .cartGrid {
     display: grid;

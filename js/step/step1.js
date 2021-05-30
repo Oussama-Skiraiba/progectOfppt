@@ -1,8 +1,9 @@
 let diparte = document.querySelector("#diparte");
 let cartTime = document.querySelector("#cartTime");
 let cartGrid = document.querySelector("#cartGrid");
-let ul = document.querySelector("#ul");
-let menu = document.querySelector("#menu");
+
+
+
 
 const template = `<div class="catrInfo" id="catrInfo">
 <img src="../../images/icons/logo.svg" alt="">
@@ -68,9 +69,3 @@ const template = `<div class="catrInfo" id="catrInfo">
 // }
 
 
-menu.addEventListener("click",()=>{
-    ul.classList.toggle('show');
-    ul.style.display = "block";
-    ul.style.opacity = 1;
-    ul.style.Zindex = 1;
-});
