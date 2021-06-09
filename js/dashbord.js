@@ -2,6 +2,7 @@ fetch('http://localhost/ProgectOfppt/php/admin/handleDateime.php')
     .then(response => response.json())
     .then(data => {
         let obj = {};
+        // this elment repet in the array
         data.response.forEach(_ => obj[_] = (obj[_] | 0) + 1);
         chartit(obj);
     });

@@ -10,7 +10,19 @@
 
 </head>
 
-<body>
+<body class="scroleHeadin">
+
+    <!-- Statr loade -->
+    <div class="loade" id="loade">
+        <div class="div1">
+            <div class="div2">
+                <div class="div3"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End loade -->
+
     <!-- Start Header -->
     <header>
         <?php include "include/header.php"; ?>
@@ -29,37 +41,32 @@
         <div class="loginHeader">
             <div class="loginContainer">
                 <div class="input">
-                    <input type="text" placeholder="Departure place">
-                    <input type="text" placeholder="Arrival place">
+                    <input type="text" placeholder="Departure place" id="Departure">
+                    <input type="text" placeholder="Arrival place" id="goto">
                 </div>
 
                 <div class="radoi">
                     <label for="">Round Trip</label>
-                    <input type="radio" checked name="trip">
-                    <label for="">Round Trip</label>
-                    <input type="radio" name="trip">
+                    <input type="radio" checked name="trip" id="RoundTrip">
+                    <label for="">One Way</label>
+                    <input type="radio" name="trip" id="OneWay">
                 </div>
+
                 <div class="input">
                     <label for="">Departure</label>
-                    <input type="date">
+                    <input type="date" id="DateDeparture">
                     <label for="">Return</label>
-                    <input type="date">
+                    <input type="date" id="DateReturn">
 
-                    <select id="" class="selectClass" name="Class">
-                        <option value="">Class</option>
-                        <option value="">test2</option>
-                        <option value="">test3</option>
-                        <option value="">test4</option>
+                    <select class="selectClass" name="Class" id="class">
+                        <option value="Economy">Economy</option>
+                        <option value="Business">Businsess Class</option>
+                        <option value="First">First Class</option>
                     </select>
-                    <select id="" class="selectAge" name="age">
-                        <option value="">Age</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                    </select>
+                    <input type="number" placeholder="Seats" id="seats">
                 </div>
                 <div class="btnSreash">
-                    <button>Sheach</button>
+                    <button id="search">Search</button>
                 </div>
             </div>
         </div>
@@ -87,11 +94,11 @@
 
     <!-- End Header -->
 
-    <div class="svgHeader">
+    <!-- <div class="svgHeader">
         <svg xmlns="http://www.w3.org/2000/svg" width="1449" viewBox="0 0 1366 143.673">
             <path id="Path_12" data-name="Path 12" d="M0,143.673l20.68-17.959c20.68-17.959,61.849-53.877,103.588-65.831,41.265-12.179,82.529.168,124.268-3.031C289.8,53.877,331.065,35.918,372.8,32.944c41.17-3.2,82.529,9.148,124.268,8.98,41.075.168,82.529-12.179,124.268-3.031C662.32,47.7,703.87,78.01,744.66,98.775c41.834,20.765,83.478,33.112,124.268,20.934,41.739-11.954,83.478-47.872,124.268-41.867,41.644,5.781,83.478,54.046,124.268,56.852,41.549,2.806,82.529-38.724,124.268-47.872,41.454-8.811,82.529,14.76,103.4,26.939L1366,125.714V0H0Z" fill="#cac531" />
         </svg>
-    </div>
+    </div> -->
 
     <div class="margin"></div>
 
@@ -149,12 +156,9 @@
         <div class="catrContainer">
 
             <div class="card">
-
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
-
-                <div class=" back">
+                <div class="front" id="front"></div>
+                
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -167,11 +171,9 @@
             <!-- 2 -->
             <div class="card">
 
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
+                <div class="front" id="front"></div>
 
-                <div class=" back">
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -181,34 +183,11 @@
 
             </div>
 
-            <!-- 3 -->
-            <!-- <div class="card">
-
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
-
-                <div class=" back">
-                    <span class="nameLoacition">Newyork</span>
-                    <span class="priceTravel">1000$</span>
-                    <p class="info">
-                        New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
-                    </p>
-                </div>
-
-            </div> -->
-
-        <!-- </div> -->
-
-        <!-- <div class="catrContainer"> -->
-
             <div class="card">
 
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
+                <div class="front" id="front"></div>
 
-                <div class=" back">
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -221,11 +200,9 @@
             <!-- 2 -->
             <div class="card">
 
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
+                <div class="front" id="front"></div>
 
-                <div class=" back">
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -235,35 +212,15 @@
 
             </div>
 
-            <!-- 3 -->
-            <!-- <div class="card">
-
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
-
-                <div class=" back">
-                    <span class="nameLoacition">Newyork</span>
-                    <span class="priceTravel">1000$</span>
-                    <p class="info">
-                        New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
-                    </p>
-                </div>
-
-            </div> -->
-
-        <!-- </div> -->
 
 
-        <!-- <div class="catrContainer"> -->
+            <!-- <div class="catrContainer"> -->
 
             <div class="card">
 
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
+                <div class="front" id="front"></div>
 
-                <div class=" back">
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -276,11 +233,9 @@
             <!-- 2 -->
             <div class="card">
 
-                <div class=" front">
-                    <img src="../images/imagesCatigori/newyork.jpg" alt="">
-                </div>
+                <div class="front" id="front"></div>
 
-                <div class=" back">
+                <div class="back">
                     <span class="nameLoacition">Newyork</span>
                     <span class="priceTravel">1000$</span>
                     <p class="info">
@@ -289,27 +244,7 @@
                 </div>
 
             </div>
-
-            <!-- 3 -->
-            <!-- <div class="card">
-
-    <div class=" front">
-        <img src="../images/imagesCatigori/newyork.jpg" alt="">
-    </div>
-
-    <div class=" back">
-        <span class="nameLoacition">Newyork</span>
-        <span class="priceTravel">1000$</span>
-        <p class="info">
-            New York City (NYC), often simply called New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2)
-        </p>
-    </div>
-
-</div> -->
-
         </div>
-
-
     </div>
     <!-- End Catigore -->
 
@@ -422,14 +357,12 @@
     <!-- End Contact -->
 
     <!-- <div class="margin"></div> -->
-
     <!-- Start Footer -->
     <?php include "include/footer.php"; ?>
     <!-- End Footer -->
-
-
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/homme.js"></script>
 </body>
-<script src="../js/menu.js"></script>
 
 </html>

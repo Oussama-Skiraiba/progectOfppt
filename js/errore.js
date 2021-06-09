@@ -45,14 +45,15 @@ let checkErroe = ()=>{
     }else if (seats.value == "") {
         error('error', 'seats is empty')
     }
-
+    
     else {
         error('success','Your work has been saved' )
     }
+    return false
 }
 
 type.addEventListener('change',()=>{
-    if(type.value === 'Oneway') {
+    if(type.value === 'One way') {
         Returning.style.display = "none";
     }
     if(type.value === 'Roundtrip') {
@@ -62,22 +63,6 @@ type.addEventListener('change',()=>{
 })
 
 listView.addEventListener('click',()=>{
-    // items.style.display = "block";
     items.classList.toggle("dis")
     console.log("ee");
 })
-
-// open  file for uploage imag
-// images.addEventListener('click', () => {
-//     file.click();
-// })
-
-// show images
-// file.addEventListener("change", (e) => {
-//     let show = document.querySelector("#showImg");
-//     show.src = URL.createObjectURL(e.target.files[0]);
-//     show.style.display = 'block';
-//     show.style.opacity = 1;
-//     show.style.position ='relative';
-// });
-

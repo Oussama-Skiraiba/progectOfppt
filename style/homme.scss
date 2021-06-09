@@ -1,7 +1,81 @@
 @import "sass/sab/body";
 @import "sass/header/header";
-@import "sass/fotter/fotter";
-@import "sass/mediaQuery/homePage";
+
+
+// State loade
+// 
+.scroleHeadin {
+    overflow: hidden;
+}
+
+.loade {
+    position: fixed;
+    width: calc(100% + 2.5rem);
+    height: calc(100% + 2.5rem);
+    background: $HeaderBackground;
+    z-index: 20;
+    top: -2.5rem;
+    left: -2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    *{
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // animation-name: load;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+
+    }
+
+    .div1 {
+        width: 180px;
+        height: 180px;
+        border-color: $ColorTitle transparent;
+        animation: load 1.5s infinite linear;
+
+        .div2 {
+            width: 120px;
+            height: 120px;
+            border-color: white transparent;
+            animation: load2 1s infinite linear;
+            .div3 {
+                width: 60px;
+                height: 60px;
+                border-color: $Border transparent;
+                animation-direction: reverse;
+                animation: load .5s infinite linear;
+            }
+        }
+    }
+    @keyframes load{
+        0%{
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes load2{
+        0%{
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+}
+// End loade
+
+
+
+
 
 /*Start Hrader */
 .svgHeader{
@@ -107,6 +181,7 @@ header {
     .mainContainer{
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        // display: flex;
         padding-top: 7rem;
         .mainDiv {
             margin: 1rem 0 0 1rem;
@@ -140,8 +215,9 @@ header {
     .catrContainer {
         margin-top: 6rem;
         // width: (100% /3);
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .card {
             
             height: 420px;
@@ -151,9 +227,9 @@ header {
             cursor: pointer;
             margin-bottom: 5rem;
         
-            &:not(:first-of-type){
-                margin-left: 2rem;
-            }
+            // &:not(:first-of-type){
+            //     margin-left: 2rem;
+            // }
             .front ,.back {
                 position: absolute;
                 left: 0;
@@ -168,8 +244,8 @@ header {
             .front {
                 transform: perspective(800px) rotateY(0deg);
                 img {
-                    max-width: 100%;
-                    height:auto;
+                    height: 420px;
+                    width: 379px;
                 }
             }
             .back{
@@ -345,3 +421,5 @@ header {
 //         width: 60%;
 //     }
 // }
+@import "sass/fotter/fotter";
+@import "sass/mediaQuery/homePage";

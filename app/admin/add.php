@@ -21,19 +21,11 @@
             <div class="input">
                 <select id="type">
                     <option value="Roundtrip">Round trip</option>
-                    <option value="Oneway">One-way</option>
+                    <option value="One way">One-way</option>
                 </select>
                 <input type="text" placeholder="Leaving from" id="Leaving_from">
                 <input type="text" placeholder="Going to" id="Going_to">
                 <input type="number" placeholder="price" id="price">
-                <!-- <input type="date" name="Departing" id="Departing">
-                <input type="date" name="Returning" id="Returning">
-                <select  id="class">
-                    <option value="Economy">Economy</option>
-                    <option value="Business">Business class</option>
-                    <option value="First">First class</option>
-                </select>
-                <input type="number" placeholder="seats" id="seats"> -->
             </div>
 
             <div class="input">
@@ -45,9 +37,7 @@
                     <option value="First">First class</option>
                 </select>
                 <input type="number" placeholder="seats" id="seats">
-            
             </div> 
-            
             <button class="send" id="send">add</button>
         </div>
 
