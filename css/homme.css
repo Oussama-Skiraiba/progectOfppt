@@ -683,7 +683,7 @@ header .searchMedia {
 
 @media (min-width: 576px) and (max-width: 991px) {
   header {
-    height: 70vh !important;
+    height: 77vh !important;
     width: 85vw !important;
     position: relative;
   }
@@ -719,8 +719,8 @@ header .searchMedia {
   }
   header .titel {
     position: absolute;
-    top: 43%;
-    left: 55%;
+    top: 30%;
+    left: 53%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: 92% !important;
@@ -741,38 +741,46 @@ header .searchMedia {
   header .searchMedia {
     display: block !important;
     position: absolute;
-    top: 80%;
-    left: 15%;
+    top: 55%;
+    left: 22%;
     width: 70%;
     -webkit-transform: translate(-3px, -7px);
             transform: translate(-3px, -7px);
   }
-  header .searchMedia .inputSearch .input {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border: 1px solid #CAC531;
-    border-radius: 20px;
-    padding-left: 5rem;
+  header .searchMedia span {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
   }
-  header .searchMedia .inputSearch .input::-webkit-input-placeholder {
-    display: inline-block;
+  header .searchMedia img {
+    height: 150px;
+    width: 552px;
+    -webkit-animation: ArrowAnimation 2s infinite;
+            animation: ArrowAnimation 2s infinite;
+    -webkit-transition: ArrowAnimation .7s ease-in;
+    transition: ArrowAnimation .7s ease-in;
+    cursor: pointer;
   }
-  header .searchMedia .inputSearch .input:-ms-input-placeholder {
-    display: inline-block;
+  @-webkit-keyframes ArrowAnimation {
+    0% {
+      -webkit-transform: translateX(-13px);
+              transform: translateX(-13px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
   }
-  header .searchMedia .inputSearch .input::-ms-input-placeholder {
-    display: inline-block;
-  }
-  header .searchMedia .inputSearch .input::placeholder {
-    display: inline-block;
-  }
-  header .searchMedia .inputSearch .imagesSearchInput {
-    position: absolute;
-    top: 4px;
-    left: 15px;
-  }
-  header .searchMedia .inputSearch .imagesSearchInput img {
-    height: 30px;
+  @keyframes ArrowAnimation {
+    0% {
+      -webkit-transform: translateX(-13px);
+              transform: translateX(-13px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
   }
   header .btnHeader {
     display: none;

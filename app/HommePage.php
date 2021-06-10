@@ -74,13 +74,9 @@
         <!-- search Media query -->
 
         <div class="searchMedia">
-            <div class="inputSearch">
-                <input type="text" placeholder="Where are you giong" class="input">
-                <div class="imagesSearchInput">
-                    <img src="../images/mediaQuery/search.svg" alt="search">
-                </div>
-
-            </div>
+            <!-- <img src="../images/mediaQuery/right-arrow.svg  " alt=""> -->
+            <span>Book your flight </span>
+            <img src="../images/mediaQuery/pngwing.com.png" alt="" id="arrow">
         </div>
 
 

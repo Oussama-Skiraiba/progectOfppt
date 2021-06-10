@@ -10,7 +10,7 @@ let DateReturn = document.querySelector("#DateReturn");
 let Class = document.querySelector("#class");
 let seats = document.querySelector("#seats");
 let search = document.querySelector("#search");
-
+let arrow = document.querySelector("#arrow");
 // Errore
 let error = (index, text) => {
     Swal.fire({
@@ -106,4 +106,8 @@ search.addEventListener('click',()=>{
     // getApi();
 
     
+})
+
+arrow.addEventListener("click",()=> {
+    location.href = "http://localhost/ProgectOfppt/app/APi.php"
 })
