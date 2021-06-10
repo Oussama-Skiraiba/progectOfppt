@@ -25,6 +25,7 @@
     
 </body>
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
 
 <script type="module">
     import QrScanner from '../../qrLib/qr-scanner.min.js';
@@ -32,7 +33,9 @@
     // do something with QrScanner
     let qrVideo = document.querySelector("#qrV");
     let id;
+    
     const qrScan = new QrScanner(qrVideo, (result) => {
+        console.log(result); // result is counter 
         id = result;
         let fd = new FormData();
         fd.set('id', id);
@@ -40,38 +43,38 @@
         fetch("http://localhost/ProgectOfppt/php/admin/qrScaner.php", {
                 method: "POST",
                 body: fd
-            }).then(res => res.text())
+            }).then(res => res.json())
             .then(data => {
+                // console.log(data)
                 let flight = data.response[0];
                 if (flight == undefined) {
                     qrScan.stop();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'error',
-                        title: 'medicine not found',
+                        title: 'flight not found',
                         showConfirmButton: false,
                         timer: 1500
                     }).then(() => qrScan.start());
                 } else {
                     qrScan.stop();
-                    let html = `<label>leaving_from :</label> <input type="text" value="${flight.leaving_from}" disabled><br>
-                            <label>going_to :</label> <input type="text" value="${flight.going_to}" disabled><br>
+                    let html = `<label>leaving from :</label> <input type="text" value="${flight.leaving_from}" disabled><br>
+                            <label>going to :</label> <input type="text" value="${flight.going_to}" disabled><br>
                             <label>type :</label> <input type="text" value="${flight.type}" disabled><br>
-                            <label>type :</label> <input type="text" value="${flight.class}" disabled><br>
-                            <label>type :</label> <input type="text" value="${flight.seats}" disabled><br>
-                            <label>type :</label> <input type="text" value="${flight.price}" disabled><br>
+                            <label>class :</label> <input type="text" value="${flight.class}" disabled><br>
+                            <label>seats :</label> <input type="text" value="${flight.seats}" disabled><br>
+                            <label>price :</label> <input type="text" value="${flight.price}" disabled><br>
                             `;
-                    swite(html, flight._id);
+                    swite(html, flight.id);
                 }
                 
-                console.log(data)
             })
     });
     qrScan.start();
     // 
     let swite = (h, id) => {
         Swal.fire({
-            title: `<strong>Medicine N° ${id}</strong>`,
+            title: `<strong>flight N° ${id}</strong>`,
             icon: 'success',
             html: h,
             showCloseButton: true,

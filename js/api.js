@@ -45,7 +45,7 @@ async function getImages(city) {
                                 <span>${el.going_to}</span>
                                 <ul class="circle "></ul>
                                 <div class="selcet">
-                                    <a href="#" class="reserve" id="reserve" odata-reserve="${el.seats}">reserve</a>
+                                    <a href="#" class="reserve" id="reserve" onclick="reserve(${el.id})" data-reserve="${el.seats}">reserve</a>
                                     <select name="" id="">
                                         <option value="">Deteile</option>
                                         <option value="">${el.class}</option>
@@ -59,18 +59,21 @@ async function getImages(city) {
                     </div>`
         globale.insertAdjacentHTML("beforeend", images);
         
-        // function reserve (reserv) {
-        //     console.log(reserv); 
-        // }
     })
+    console.log(city);
 }
 
 
 
-// console.log(location.search.slice(1).replaceAll('%20', '').split("&"));
+function reserve(id) {
+    let fd = new FormData();
+    fd.set("id",id);
+    fetch("http://localhost/progectOfppt/php/usr/resrvetion.php",{method:"POST",body:fd})
+    .then(res=>res.json())
+    .then(data=> console.log(data))
 
 
-
+}
 
 
 

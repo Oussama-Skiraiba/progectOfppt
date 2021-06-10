@@ -51,6 +51,7 @@
     
     width: 90%;
     // height: 90vh;
+    min-height: 60vh;
     background: $FotterBackgroundSocialMedia;
     margin: 4rem auto 2rem;
     border-radius: 20px;
@@ -62,6 +63,7 @@
             text-transform: capitalize;
             font-weight: bold;
             color: $HeaderBackground;
+            padding-top: 2rem;
         }
 }
 
@@ -79,6 +81,7 @@
     color: $white;
     transition: transform .7s ease-in;
     text-align: center;
+    z-index: 10;
     &:hover {
         transform: translateY(-3px);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

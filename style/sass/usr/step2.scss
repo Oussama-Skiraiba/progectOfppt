@@ -7,114 +7,17 @@
 
 .cartGrid {
     margin: 1rem;
-    .cartConatiner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-        margin: 1rem auto;
-        .contact {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            margin-bottom: 2rem;
-            span{
-                margin-right: 1rem;
-                font-size: 2rem;
-                color: $white;
-            }
-            input {
-                border: 1px solid $Border;
-                border-radius: 10px;
-                padding: 10px 15px;
-                width: 44%;
-                margin: 0 1rem;
-                background: $FotterBackgroundSocialMedia;
-                color: $white;
-                font-size: 2rem;
-                &:placeholder-shown{
-                    font-size: 2rem;
-                }
-            }
-        }
-        .adult {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            span{
-                margin-right: 1rem;
-                font-size: 2rem;
-                color: $white;
-            }
-            select {
-                margin-right: 1rem;
-                padding: 10px 15px;
-                margin: 0 3rem;
-                border-radius: 5px;
-                padding: 10px 15px;
-                width: 130px;
-                color: $white;
-                background: $FotterBackgroundSocialMedia;
-
-            }
-            input {
-                border: 1px solid $Border;
-                border-radius: 10px;
-                padding: 10px 15px;
-                width: 30%;
-                margin: 0 1rem;
-                background: $FotterBackgroundSocialMedia;
-                color: $white;
-                font-size: 2rem;
-                &:placeholder-shown{
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
+    
     .passport {
-        margin: 6rem auto 1rem;
-        width: 100%;
-        transition: all 1s ease-in-out;
-        .border {
-            
-            position: relative;
-            button {
-                box-shadow: rgba(7, 7, 7, 0) 0px 50px 100px -10px, rgb(0, 0, 0) 0px 30px 60px -20px;
-                padding: 10px 15px;
-                width: 320px;
-                border: 1px solid $Border;
-                border-radius: 30px;
-                display: block;
-                margin: 2rem auto 1rem;
-                font-size: 2rem;
-                background: $FotterBackgroundSocialMedia;
-                color: $white;
-                
-            }
-            .imageBoreder {
-                position: absolute;
-                right: 21%;
-                width: 20%;
-                bottom: -2px;
-                img{
-                    height: 30px;
-                    cursor: pointer;
-                    
-                }
-            }
-            &:hover {
-                transform: translateY(-3px);
-            }
+        .infpSpan {
+            font-size: 2rem;
+            color: $white;
+            display: block;
+            margin-left: 2rem;
         }
-        // .show {
-        //     // display: block !important;
-        // }
+        
         .passportInfo{
-            // display: none;
-            background:$FotterBackgroundSocialMedia;
-            box-shadow: 0px 0px 10px $ColorPremierAndBackground;
-            height: 100px;
-            margin: 2rem auto 1rem;
-            width: 900px;
-            height: 220px;
+        
             .paddingInfp {
                 padding: 1rem;
                 display: grid;
@@ -151,54 +54,25 @@
                         font-size: 1.5rem;
                     }
                 }
-                .info__2 {
-                    margin-top: 3rem;
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-
-                    .dateInfoUsr {
-                        grid-column-start: 1;
-                        grid-column-end: 2;
-                        span{
-                            font-size: 2rem;
-                            color: $white;
-                        }
-                        q{
-                            display: block;
-                            color: $white;
-                            font-size: 1rem;
-                            margin-left: 1rem;
-                        }
-                        input {
-                            &:not(:first-of-type) {
-                                width: calc(80% / 3);
-                                padding: 5px 15px;
-                                font-size: 2rem;
-                                border-radius: 10px;
-                                margin: 1rem;
-                                padding: 10px 15px;
-                                border: 1px solid $Border;
-                            }
-                        }
+                .dateInfoPassport {
+                    margin-top: 2rem;
+                    span {
+                        font-size: 2rem;
+                        color: #fff;
+                        margin: 0 1rem;
                     }
-                    .dateInfoPassport {
-                        grid-column-start: 2;
-                        grid-column-end: 2;
-                        span{
-                            font-size: 2rem;
-                            color: $white;
-                            display: block;
-                        }
-                        input {
-                            width: calc(72% / 3);
-                            padding: 6px 6px;
-                            font-size: 2rem;
-                            border-radius: 10px;
-                            margin-top: 2.5rem;
+                    input {
+                        width: 45%;
                             padding: 10px 15px;
                             border: 1px solid $Border;
-                            
-                        }
+                            border-radius: 10px;
+                            margin-right: 1rem;
+                            background: $FotterBackgroundSocialMedia;
+                            color: $white;
+                            font-size: 2rem;
+                            &:placeholder-shown{
+                                font-size: 2rem;
+                            }
                     }
                 }
             }

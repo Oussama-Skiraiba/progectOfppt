@@ -33,32 +33,8 @@ session_start();
         <h2>Traveller Information</h2>
         <div class="cartGrid">
 
-            <!-- <div class="cartConatiner">
-                <div class="contact">
-                    <span>Contact</span>
-                    <input type="number" placeholder="Mobile Number">
-                    <input type="text" placeholder="CIN">
-                </div>
-
-                <div class="adult">
-                    <span>Adult</span>
-                    <select name="" id="">
-                        <option value="">Gender</option>
-                        <option value="">Male</option>
-                        <option value="">Femal</option>
-                    </select>
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
-                </div>
-
-            </div> -->
             <div class="passport">
-                <div class="border">
-                    <button class="check" id="chek">Passport Information</button>
-                    <div class="imageBoreder">
-                        <img src="../../images/iconBorder/arrow-top-sign-to-navigate.svg" alt="">
-                    </div>
-                </div>
+                    <span  class="infpSpan">Passport Information</span>
                 <div class="passportInfo" id="block">
                     <div class="paddingInfp">
                         <div class="info__1">
@@ -322,12 +298,12 @@ session_start();
                             </select>
 
                         </div>
-                        <div class="info__2">
-                            <div class="dateInfoPassport">
-                                <span> Passport Expiry Date </span>
-                                <input type="date" id="Passport">
-                            </div>
+                        
+                        <div class="dateInfoPassport">
+                            <span> Passport Expiry Date </span>
+                            <input type="date" id="Passport">
                         </div>
+                    
                     </div>
                 </div>
             </div>
@@ -335,7 +311,7 @@ session_start();
         </div>
     </div>
     <button class="next" id="next">Next</button>
-    <?php  // include "../include/GlobaleUsrFooter.php"; 
+    <?php  include "../include/GlobaleUsrFooter.php"; 
     ?>
 
 </body>
