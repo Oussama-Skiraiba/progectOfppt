@@ -10,7 +10,7 @@ let addClass = (element, NameClass) => element.classList.add(NameClass)
 
 search.addEventListener('keyup', () => {
     if (search.value === "") { showData.innerHTML = ""; return; }
-    // showData.classList.add("showData")
+
     addClass(showData,"showData")
     fetch('http://localhost/progectOfppt/php/admin/search.php?search=' + search.value)
         .then(res => res.json())
@@ -44,29 +44,18 @@ search.addEventListener('keyup', () => {
             // create temp for take html and show in search and take  data in dataShow 
             
             data.forEach(element => {
-                // let templat = 
-                //     `<span 
-                //             data-show="${element.type}-${element.leaving_from}-${element.going_to}-${element.price}-${element.departing}-${element._returning}-${element.class}-${element.seats}">
-                //                 ${element.leaving_from} ${element.going_to}
-                //         </span>`;
-                // getData(templat);
-                // showData.insertAdjacentHTML("afterbegin",templat );
-
                 let templat =document.createElement('span');
                 templat.dataset.show = `${element.type}-${element.leaving_from}-${element.going_to}-${element.price}-${element.departing}-${element._returning}-${element.class}-${element.seats}`;
                 templat.textContent = ` ${element.leaving_from} ${element.going_to}`;
                 showData.appendChild(templat);
                 getData(templat,element)
-
             });
-
             showData.style.display = "block";
         }
         );
 });
 
 // upadate
-
 
 send.addEventListener("click", () => {
 

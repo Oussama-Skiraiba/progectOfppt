@@ -98,7 +98,7 @@ header .search input {
 }
 
 header .search .showData {
-  background: red;
+  background: #2196f3;
   width: 89%;
   margin: 1rem 0 0 4rem;
   border-radius: 10px;
@@ -115,7 +115,7 @@ header .search .showData span {
 }
 
 header .search .showData span:hover {
-  background: purple;
+  background: #009688;
 }
 
 header .loginAdmin {

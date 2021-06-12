@@ -1,12 +1,16 @@
 <div class="main">
     <div class="mainContainer">
         <div class="dashboard">
-            <img src="../../images/addminIcon/dashboard.svg" alt="dashboard">
+            <a href="http://localhost/ProgectOfppt/app/admin/dashbord.php"> 
+                <img src="../../images/addminIcon/dashboard.svg" alt="dashboard">
+            </a>
             <span>Dashboard</span>
         </div>
 
         <div class="listView">
+            <a href="http://localhost/ProgectOfppt/app/admin/add.php">
             <img src="../../images/addminIcon/sitemap.svg" alt="sitemap">
+            </a>
             <span id="listView">List View</span>
             <div class="items" id="items">
                 <a href="#">Add</a>
@@ -16,8 +20,8 @@
         </div>
 
         <div class="sitting">
-            <img src="../../images/addminIcon/settings.svg" alt="settings">
-            <span>Sitting</span>
+            <a href="http://localhost/ProgectOfppt/app/admin/qr.php"><img src="../../images/addminIcon/qr-code.svg" alt="qrCode" id="qrCode"></a>
+            <span>Qr Code</span>
 
         </div>
 

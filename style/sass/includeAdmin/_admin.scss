@@ -58,7 +58,7 @@ header {
         }
 
         .showData {
-            background: red;
+            background: #2196f3;
             width: 89%;
             // height: 100%;
             margin: 1rem 0 0 4rem;
@@ -71,7 +71,7 @@ header {
                 cursor: pointer;
                 transition: .4s;
                 &:hover {
-                    background: purple;
+                    background: #009688;
                 }
             }
         }

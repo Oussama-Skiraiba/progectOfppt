@@ -1,0 +1,27 @@
+@import "../sass/includeAdmin/admin";
+@import "../sass/varaible/colore";
+
+.qrScan {
+    margin-top: 17rem;
+    margin-left: 29rem;
+    width: 70%;
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: $BackgroundCartAdmin;
+        display: block;
+        margin: 2rem 0;
+        margin-left: -10rem;
+    }
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .qr {
+            width: 600px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}
