@@ -440,6 +440,8 @@ header .searchMedia {
 .catgori .catrContainer .card .front img {
   height: 420px;
   width: 379px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .catgori .catrContainer .card .back {
