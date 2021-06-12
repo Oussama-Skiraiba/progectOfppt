@@ -660,6 +660,14 @@ header .searchMedia {
   margin: 3rem;
 }
 
+.footer .copy a {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 2rem;
+  background-color: #CAC531;
+  border-radius: 10px;
+}
+
 .footer .copy p {
   font-size: 2rem;
   text-align: center;

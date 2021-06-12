@@ -11,6 +11,7 @@ let Class = document.querySelector("#class");
 let seats = document.querySelector("#seats");
 let search = document.querySelector("#search");
 let arrow = document.querySelector("#arrow");
+let heler = document.querySelector("#heler");
 // Errore
 let error = (index, text) => {
     Swal.fire({
@@ -87,27 +88,16 @@ search.addEventListener('click',()=>{
         window.location.href = `http://localhost/ProgectOfppt/app/APi.php?Departure=${Departure.value}&goto=${goto.value}&
                                 checked=${OneWayChecked}&DateDeparture=${DateDeparture.value}
                                 &Class=${Class.value}&seats=${seats.value}`;
-    }
-
-
-    // async function getApi() {
-    //     let fb = new FormData();
-    //     fb.append("Departure",Departure.value);
-    //     fb.append("goto",goto.value);
-    //     fb.append("RoundTrip",RoundTripo.value);
-    //     fb.append("OneWay",OneWay.value);
-    //     fb.append("DateDeparture",DateDeparture.value);
-    //     fb.append("DateReturn",DateReturn.value);
-    //     fb.append("Class",Class.value);
-    //     fb.append("seats",seats.value);
-    //     const res = await fetch("http://localhost/ProgectOfppt/php/api.php",{method:"POST",body:fb})
-    //     const data = await res.json();
-    // }
-    // getApi();
-
-    
+    }    
 })
 
 arrow.addEventListener("click",()=> {
     location.href = "http://localhost/ProgectOfppt/app/APi.php"
 })
+
+heler.addEventListener('click',()=>{
+    window.open("tel:777");
+})
+
+// gmail1998-06-10oo
+// oussamaskiraiba@gmail.com

@@ -28,6 +28,13 @@
     }
     .copy{
         margin: 3rem;
+        a {
+            padding: 10px 15px;
+            color: $white;
+            font-size: 2rem;
+            background-color: #CAC531;
+            border-radius: 10px;
+        }
         p {
             font-size: 2rem;
             text-align: center;

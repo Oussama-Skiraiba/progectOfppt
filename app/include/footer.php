@@ -37,6 +37,7 @@
     </div>
 
     <div class="copy">
+        <a href="#" id="heler">Helper</a>
             <p>&copy;2021 Travel</p>
             <div class="icon">
                 <img src="../images/socialMedia/facebook.svg" alt="">
