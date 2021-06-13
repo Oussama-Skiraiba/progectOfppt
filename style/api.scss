@@ -35,40 +35,51 @@ body {
                 h2 {
                     padding-top: 1rem;
                 }
-                span {
-                    font-size: 2rem;
-                    display: inline-block;  
-                    &:not(:first-of-type){
-                        margin-left: 9rem;
-                    }   
-                    &::after {
-                        position: absolute;
-                        content: "";
-                        width: 30px;
-                        border: 2px solid $ApiBorder;
-                        top: 66px;
-                        border-radius: 10px;
-                        left: 43px
-                    }
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        width: 30px;
-                        border: 2px solid $ApiBorder;
-                        top: 66px;
-                        border-radius: 10px;
-                        left: 89px;
-                    }
-                }
-                .circle {
-                    width: 16px;
-                    height: 16px;
-                    border: 1px solid $ApiBorder;
-                    border-radius: 50%;
+                .flex {
                     position: absolute;
-                    top: 59px;
-                    left: 73px;
+                    top: 10%;
+                    left: 31%;
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 30px;
+                            border: 2px solid $ApiBorder;
+                            top: 66px;
+                            border-radius: 10px;
+                            left: 43px
+                        }
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 30px;
+                            border: 2px solid $ApiBorder;
+                            top: 66px;
+                            border-radius: 10px;
+                            left: 89px;
+                        }
+                    }
+                    .circle {
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid $ApiBorder;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 59px;
+                        left: 73px;
+                    }
                 }
+
+                
+                .center {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 2rem;
+                    span {
+                        font-size: 2rem;
+                        display: inline-block;  
+                    }
+                }
+                
                 .selcet {
                     margin-top: 1rem;
                     border: 1px solid $ApiBorder;
@@ -97,7 +108,7 @@ body {
                     color: $ApiBorder;
                     cursor: pointer;
                 }
-            }
+        
         
         }
         

@@ -80,16 +80,13 @@ body {
   padding-top: 1rem;
 }
 
-.flex-catigori .globale .card .card-margin span {
-  font-size: 2rem;
-  display: inline-block;
+.flex-catigori .globale .card .card-margin .flex {
+  position: absolute;
+  top: 10%;
+  left: 31%;
 }
 
-.flex-catigori .globale .card .card-margin span:not(:first-of-type) {
-  margin-left: 9rem;
-}
-
-.flex-catigori .globale .card .card-margin span::after {
+.flex-catigori .globale .card .card-margin .flex::after {
   position: absolute;
   content: "";
   width: 30px;
@@ -99,7 +96,7 @@ body {
   left: 43px;
 }
 
-.flex-catigori .globale .card .card-margin span::before {
+.flex-catigori .globale .card .card-margin .flex::before {
   position: absolute;
   content: "";
   width: 30px;
@@ -119,7 +116,22 @@ body {
   left: 73px;
 }
 
-.flex-catigori .globale .card .card-margin .selcet {
+.flex-catigori .globale .card .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem;
+}
+
+.flex-catigori .globale .card .center span {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.flex-catigori .globale .card .selcet {
   margin-top: 1rem;
   border: 1px solid #0d6efd;
   border-top-left-radius: 4px;
@@ -127,13 +139,13 @@ body {
   width: 240px;
 }
 
-.flex-catigori .globale .card .card-margin .selcet .reserve {
+.flex-catigori .globale .card .selcet .reserve {
   border-right: 0;
   padding: 7px;
   font-size: 2rem;
 }
 
-.flex-catigori .globale .card .card-margin .selcet select {
+.flex-catigori .globale .card .selcet select {
   font-size: 1.7rem;
   padding: 7px;
   border-left: 1px solid #0d6efd;
@@ -142,7 +154,7 @@ body {
   border-bottom: 0;
 }
 
-.flex-catigori .globale .card .card-margin p {
+.flex-catigori .globale .card p {
   text-align: right;
   padding: 1rem;
   margin-right: 2rem;

@@ -1,6 +1,16 @@
 let key = "client_id=70h5U9rt97qG_o1hqnC0DgW9of4brM196-PJsAlRJNM";
 let globale = document.querySelector("#globale");
 let searchFly = location.search.slice(1).replaceAll('%20', '').split("&");
+let error = (index, text) => {
+    Swal.fire({
+        position: 'center',
+        icon: index,
+        title: text,
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
 
 if(location.search) {
     getApi(true);
@@ -41,9 +51,13 @@ async function getImages(city) {
                         <div class="card">
                             <div class="card-margin">
                                 <h2>${el.type}</h2>
-                                <span>${el.leaving_from}</span>
-                                <span>${el.going_to}</span>
-                                <ul class="circle "></ul>
+                                <div class ="flex">
+                                    <ul class="circle "></ul>
+                                </div>
+                                    <div class ="center">
+                                        <span>${el.leaving_from}</span>
+                                        <span>${el.going_to}</span>
+                                    </div>
                                 <div class="selcet">
                                     <a href="#" class="reserve" id="reserve" onclick="reserve(${el.id})" data-reserve="${el.seats}">reserve</a>
                                     <select name="" id="">
@@ -70,7 +84,14 @@ function reserve(id) {
     fd.set("id",id);
     fetch("http://localhost/progectOfppt/php/usr/resrvetion.php",{method:"POST",body:fd})
     .then(res=>res.json())
-    .then(data=> console.log(data))
+    .then(data=> {
+        if(data.reserve ==="ok") {
+            error('success','Your work has been saved' )
+        }
+        else {
+            error('error', 'seats is palen')
+        }
+    })
 
 
 }
